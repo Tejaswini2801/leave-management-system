@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Leave Management System</title>
+		<link rel="stylesheet" href="/static/css/ink/css/ink.css" type="text/css">
+		<link rel="stylesheet" href="/static/css/lms/main.css" type="text/css">
+	</head>
+	<body>
+		<div class="all-15 vertical-space push-center">
+			<img src="/static/images/lms/logo.gif" />
+		</div>
+		<div class="all-50 push-center">
+			<form class="ink-form" action="login" method="post">
+				<div class="control-group column-group space">
+					<label class="all-50 align-left">Email</label>
+					<div class="control all-50">
+						<input type="text" id="email" name="email">
+					</div>
+				</div>
+				<div class="control-group column-group space">
+					<label class="all-50 align-left">Password</label>
+					<div class="control all-50">
+						<input type="password" id="password" name="password">
+					</div>
+				</div>
+				<div class="control-group column-group push-right space">
+					<div class="control">
+						<input class="ink-button green" type="submit" id="submit" name="submit" value="Sign In">
+					</div>
+				</div>
+			</form>
+			<a href="#" id="forgotPasswordTrigger">Forgot Password</a>
+		</div>
+
+	</body>
+</html>

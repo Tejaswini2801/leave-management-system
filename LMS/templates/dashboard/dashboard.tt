@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leave Management System</title>
+	<link rel="stylesheet" href="/static/css/ink/css/ink.css" type="text/css">
+	<link rel="stylesheet" href="/static/css/lms/main.css" type="text/css">
+</head>
+
+<body>
+	<div class="ink-grid">
+		<div class="column-group horizontal-gutters">
+			<div class="all-10">
+				<img src="/static/images/lms/logo.gif" />
+			</div>
+			<div class="all-90">
+				<nav class="ink-navigation">
+				<ul class="menu horizontal black">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Request Leave</a></li>
+					<li><a href="#">View Request</a></li>
+					<li><a href="#">View Status</a></li>
+					<li><a>Employee Details</a></li>
+					<li class="right"><a href="#">Nirmal</a>
+						<ul class="submenu">
+							<li><a href="#" id="profileModalTrigger">Profile</a></li>
+							<li><a href="#" id="passwordModalTrigger">Change Password</a></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="ink-grid">
+		<div class="column-group horizontal-gutters">
+			<div class="all-10" >
+				<p class="ink-label black align-center">Leaves left </br> [% available_leaves %] </p>
+			</div>
+			<div class="all-90">
+				<table id="myTable" class="ink-table bordered hover alternating">
+					<thead>
+						<th class="align-left">First Name</th>
+						<th class="align-left">Last Name</th>
+						<th class="align-left">Email</th>
+					</thead>
+					<tbody>
+					<tr>
+						<td>{{employee.FirstName}}</td>
+						<td>{{employee.LastName}}</td>
+						<td>{{employee.Email}}</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for profile information (using Ink) -->
+	<div class="ink-shade fade">
+		<div id="profileModal" class="ink-modal fade" data-trigger="#profileModalTrigger" data-width="50%" data-height="50%" role="dialog" aria-hidden="true" aria-labelled-by="modal-title">
+			<div class="modal-header">
+				<button class="modal-close ink-dismiss"></button>
+				<h2 id="modal-title">Profile Information</h2>
+			</div>
+			<div class="modal-body" id="modalContent">
+				<table class="ink-table alternating">
+					<tbody>
+						<tr>
+							<td>First Name</td>
+							<td>Nirmal</td>
+						</tr>
+						<tr>
+							<td>Last Name</td>
+							<td>Kumar S</td>
+						</tr>
+						<tr>
+							<td>Hire Date</td>
+							<td>07-Jan-2015</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>nirmal@exceleron.com</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<div class="push-right">
+					<!-- Anything with the ink-dismiss class will close the modal -->
+					<button class="ink-button caution ink-dismiss">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End of profile information modal -->
+
+	<!-- Modal for changing password (using Ink) -->
+	<div class="ink-shade fade">
+		<div id="passwordModal" class="ink-modal fade" data-trigger="#passwordModalTrigger" data-width="50%" data-height="80%" role="dialog" aria-hidden="true" aria-labelled-by="modal-title">
+			<div class="modal-header">
+				<button class="modal-close ink-dismiss"></button>
+				<h2 id="modal-title">Change Password</h2>
+			</div>
+			<div class="modal-body" id="modalContent">
+				<form class="ink-form" action="" method="post">
+					<div class="control-group column-group space">
+						<label class="all-50 align-left">Current Password</label>
+						<div class="control all-50">
+							<input type="password" id="old_password" name="old_password">
+						</div>
+					</div>
+					<div class="control-group column-group space">
+						<label class="all-50 align-left">New Password</label>
+						<div class="control all-50">
+							<input type="password" id="new_password" name="new_password">
+						</div>
+					</div>
+					<div class="control-group column-group space">
+						<label class="all-50 align-left">Confirm Password</label>
+						<div class="control all-50">
+							<input type="password" id="confirm_password" name="confirm_password">
+						</div>
+					</div>
+					<div class="control-group column-group space push-right">
+						<div class="control">
+							<input class="ink-button green" type="submit" id="submit" name="submit" value="Save Changes">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<div class="push-right">
+					<!-- Anything with the ink-dismiss class will close the modal -->
+					<button class="ink-button caution ink-dismiss">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End of change password modal -->
+
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+.right {
+	float: right !important;
+}
+
+form {
+	background-color: #EDEDED;
+	overflow: hidden; /* To ensure background color covers the entire form*/
+}
